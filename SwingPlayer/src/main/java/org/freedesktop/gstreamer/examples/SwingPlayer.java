@@ -59,6 +59,8 @@ public class SwingPlayer {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.setProperty("gstreamer.path", "E:\\gstreamer\\1.0\\mingw_x86_64\\bin");
+//        System.setProperty("jna.encoding", "gbk");
 
         /**
          * Set up paths to native GStreamer libraries - see adjacent file.
@@ -78,7 +80,7 @@ public class SwingPlayer {
 
             // It's 2021! Using Apache-licensed FlatLaf.
             FlatDarkLaf.install();
-            boolean useNativeFileDialog = true;
+            boolean useNativeFileDialog = false;
 
             /**
              * GstVideoComponent from gst1-java-swing is a Swing component that
